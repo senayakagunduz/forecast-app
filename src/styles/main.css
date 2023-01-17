@@ -1,0 +1,96 @@
+  *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: url("../assets/Sea\ of\ Clouds.png");
+    background-repeat: no-repeat;
+    color:#222
+  }
+  .main{
+    width: 100% ;
+    height: 100%;
+  }
+  .title{
+    margin-top:1rem;
+  }
+  .dropdown{
+    width:30rem;
+    height:3rem;
+    padding:3px;
+    margin: 1rem auto;
+    border-radius: .75rem;
+    border-style: hidden;
+    background-color:white;
+    border-color:white; 
+    border: .35px solid;
+    box-shadow: 5px 10px #035390;
+    border-radius: 1rem;
+    cursor:pointer;
+  }
+  .box{
+    height: 40%;
+    width:40vw;
+    margin: 1rem auto;
+    padding: 3rem;
+    border:1px solid;
+    box-shadow: 5px 10px #035390;
+    border-radius: 1rem;
+    background-color:white;
+    display: grid;
+    /* flex-wrap: wrap; */
+    gap: 2rem;  
+  }
+  .footer{
+    width:80vw;
+    height: 40%;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-color: #035390;
+    border-radius: 1rem;
+    border:1px solid;
+    box-shadow: 10px 15px #035390;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; 
+  }
+  .day{
+    box-sizing: border-box;
+    background-color:#f1f5f8;
+    height: 20vh;
+    width:20%;
+    border-style: outset;
+    border-radius: 1rem;
+    padding: 3px;
+    text-decoration: #222; 
+    font-weight: bold;
+    display: grid;
+    cursor:pointer;
+  }
+  .day p{
+    margin-top: .5rem;
+  }
+  .temp{
+    display: flex;
+    justify-content: flex-start; 
+  }
+  .forecast{
+    margin-left: auto;
+    font-weight: bold;
+    text-align: start;
+  } 
+  .listitem{
+    list-style: none;
+  }
+  .city{
+    font-size:x-large;
+  }
+  
+  
+  
+  
+
+  

@@ -1,15 +1,13 @@
-import './App.css';
-import { CityProvider } from './context/CityContext';
-import { WheatherProvider } from './context/WheatherContext';
+import "./styles/main.css"
+import Container from './components/Container';
+//import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
     <div className="App">
-      <WheatherProvider>
-        <CityProvider>
-          
-        </CityProvider>
-      </WheatherProvider>
+        {/* <Wrapper> */}
+          <Container/>
+        {/* </Wrapper>   */}
     </div>
   );
 }
