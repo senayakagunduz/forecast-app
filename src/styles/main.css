@@ -39,8 +39,8 @@
     box-shadow: 5px 10px #035390;
     border-radius: 1rem;
     background-color:white;
-    display: grid;
-    /* flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;  
   }
   .footer{
@@ -60,18 +60,30 @@
   .day{
     box-sizing: border-box;
     background-color:#f1f5f8;
-    height: 20vh;
-    width:20%;
+    height: 30vh;
+    width:30%;
     border-style: outset;
     border-radius: 1rem;
     padding: 3px;
-    text-decoration: #222; 
-    font-weight: bold;
     display: grid;
     cursor:pointer;
   }
+  @media screen and (max-width: 600px) {
+    .day {
+      width: 80%; /* adjust as needed for smaller screens */
+      height: 90%; /* adjust as needed for smaller screens */
+    }
+  }
+  
   .day p{
     margin-top: .5rem;
+    color: rgb(181, 12, 24); 
+    font-weight: bold;
+    text-size-adjust: .5rem;
+    text-align: left;
+  }
+  .data{
+    color:black;
   }
   .temp{
     display: flex;
@@ -87,6 +99,10 @@
   }
   .city{
     font-size:x-large;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+ 
   }
   
   

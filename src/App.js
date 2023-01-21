@@ -5,9 +5,7 @@ import Container from './components/Container';
 function App() {
   return (
     <div className="App">
-        {/* <Wrapper> */}
           <Container/>
-        {/* </Wrapper>   */}
     </div>
   );
 }

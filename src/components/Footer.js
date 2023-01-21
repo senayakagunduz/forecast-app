@@ -1,22 +1,30 @@
-import React from 'react'
-import "../styles/main.css"
+import React, { useContext } from "react";
+import Context from "../context/Context";
+import "../styles/main.css";
+import WeatherData from "./WeatherData";
 
 const Footer = () => {
+  const {list} = useContext(Context);
+  console.log("footer",list)
   return (
-    <div className='row'>
-        <div className="footer">
-            <div className='day'>
-                <p>Pazartesi</p>
-                <p>11/15 derece</p>
-            </div>
-            <div className='day'><p>Salı</p></div>
-            <div className='day'><p>Çarşamba</p></div>
-            <div className='day'><p>Perşembe</p></div>
-            <div className='day'><p>Cuma</p></div>
-            <div className='day'><p>Cumartesi</p></div>
-        </div>
+    <div className="container">
+    <div className="footer">
+    {
+          list.map((item,index)=>{
+            console.log("item,index",item,index)
+            return (
+              <WeatherData key={index} day={item} />
+            )
+           })
+    }
     </div>
-  )
-}
+  </div>
 
-export default Footer
+        
+    //   </div>
+    // </div>
+
+  );
+};
+
+export default Footer;
