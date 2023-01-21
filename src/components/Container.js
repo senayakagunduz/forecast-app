@@ -38,16 +38,15 @@ const Container = () => {
     console.log("selecetedCity",selectedCity)
   };
   return (
-    <div className="container">
-      <div className="main">
+    <div className="wrapper">
+      <div className=" container main">
       <Content>
           <Context.Provider value={{ api_call, list }}>
             <WeatherSearch />
             {/* api_call={api_call} bunu da WeatherSearch den aldım*/}
-            {/* {weather && <WeatherData />} */}
-            <Footer />
-            {/*{list && <Footer/>} */}
-            {/* <Footer/> */}
+          
+            {/* <Footer /> */}
+            {list && <Footer/>}
             {/* weather={weather}  bunu yukarıdan sildim çünkü artık Context.Provider var*/}
             {/* Weather true ise yani api_call dan veri istendi ise WeatherData componentini göster */}  
           </Context.Provider>

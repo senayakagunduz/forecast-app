@@ -1,20 +1,28 @@
-  *{
+  /* *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body{
+  } */
+  /* body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: url("../assets/Sea\ of\ Clouds.png");
     background-repeat: no-repeat;
     color:#222
+  } */
+  .wrapper{
+    margin:10px auto;
+    padding:0 10%;
+    padding-bottom: 10px;
+    text-transform: capitalize;
   }
   .main{
     width: 100% ;
     height: 100%;
   }
   .title{
-    margin-top:1rem;
+    margin-top:3rem;
+    text-align: center;
+    text-shadow: 0 15px 10px rgba(0,0,0,0.2);
   }
   .dropdown{
     width:30rem;
@@ -30,7 +38,15 @@
     border-radius: 1rem;
     cursor:pointer;
   }
+  .container{
+    display: grid;
+    gap:15px;
+    grid-template-columns: repeat(auto-fit,min-max(270,1fr));
+  }
   .box{
+    height: 70px;
+  }
+  /* .box{
     height: 40%;
     width:40vw;
     margin: 1rem auto;
@@ -39,42 +55,39 @@
     box-shadow: 5px 10px #035390;
     border-radius: 1rem;
     background-color:white;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    gap: 2rem;  
-  }
+    gap: 2rem; 
+    /* grid-template-columns: repeat(auto-fit,min-max(270px,1fr));}  */
+   
   .footer{
-    width:80vw;
-    height: 40%;
-    margin: 3rem auto;
-    padding: 2rem;
-    border-color: #035390;
-    border-radius: 1rem;
-    border:1px solid;
-    box-shadow: 10px 15px #035390;
-    background-color:white;
+    margin: 9rem auto;
     display: flex;
     justify-content: space-between;
-    gap: 2rem; 
+    gap: .5rem; 
   }
   .day{
     box-sizing: border-box;
     background-color:#f1f5f8;
     height: 30vh;
-    width:30%;
+    width:25%;
     border-style: outset;
     border-radius: 1rem;
-    padding: 3px;
+    padding:20px;
     display: grid;
     cursor:pointer;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
   }
-  @media screen and (max-width: 600px) {
-    .day {
-      width: 80%; /* adjust as needed for smaller screens */
-      height: 90%; /* adjust as needed for smaller screens */
-    }
+  @media  (max-width: 770px) {
+   .wrapper{
+    padding:20px;
+   }
+   .day p{
+    font-size: 10px;
+   }
   }
-  
+   
   .day p{
     margin-top: .5rem;
     color: rgb(181, 12, 24); 
