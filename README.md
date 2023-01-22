@@ -1,4 +1,6 @@
 ## [https://senayakagunduz-weather-app.netlify.app/]
+
+![havadrurumu-app](https://user-images.githubusercontent.com/69090467/213905964-c0ba1294-6ce5-4920-93c6-d75ca823a8a8.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
