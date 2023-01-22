@@ -15,8 +15,8 @@ const WeatherSearch = ()=>{
             <h1 className='title animate__animated animate__bounce'>Weather App</h1>
             <div className="container">
                 <div className="row">
-                    <div className=" search-box col-lg-4 mt-3 mx-auto" value={city} onChange={handleChange} >
-                        <select name="name" id='city' className='dropdown col-lg-6 col-md-8 col-sm-12' >
+                    <div className=" search-box col-lg-12 mt-3" value={city} onChange={handleChange} >
+                        <select name="name" id='city' className='dropdown col-lg-10 col-md-10 col-sm-12' >
                             <option className='shadow-sm p-3 mb-5 bg-body rounded'>Şehir seçiniz</option>
                             {
                                 cityData.map((cityItem)=>{

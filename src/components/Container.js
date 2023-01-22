@@ -25,9 +25,11 @@ const Container = () => {
     const arr = response.data.list;
    
     setlist([]);
+    var weekDays = getWeekDays('en-US');
 
     for (let i = 0; i <= 6; i++) {
       let obj = {};
+      obj.day=weekDays[i];
       obj.temp = arr[i].main.temp;
       obj.humidity = arr[i].main.humidity;
       obj.desc = arr[i].weather[0].description;
@@ -36,6 +38,18 @@ const Container = () => {
     }
     console.log("allList",list);
     console.log("selecetedCity",selectedCity)
+  };
+
+  function getWeekDays(locale)
+  {
+      var baseDate = new Date(); 
+      var weekDays = [];
+      for(let i = 0; i < 7; i++)
+      {       
+          weekDays.push(baseDate.toLocaleDateString(locale, { weekday: 'long' }));
+          baseDate.setDate(baseDate.getDate() + 1);       
+      }
+      return weekDays;
   };
   return (
     <div className="wrapper">
