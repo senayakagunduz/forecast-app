@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, InputGroup } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import {BiSearchAlt} from "react-icons/bi"
 import "./WeatherSearch.scss"
 
