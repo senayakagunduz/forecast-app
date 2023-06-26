@@ -1,0 +1,8 @@
+body{
+    background-image: url("./assets/deniz.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height:100vh;
+    padding:30px;
+}

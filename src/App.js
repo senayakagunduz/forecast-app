@@ -4,7 +4,7 @@ import WeatherApp from "./components/WeatherApp/WeatherApp";
 
 function App() {
   return (
-    <div className="App h-100">
+    <div className="App">
           <WeatherApp/>
     </div>
   );

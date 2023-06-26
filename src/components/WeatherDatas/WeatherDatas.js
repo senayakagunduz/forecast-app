@@ -8,9 +8,11 @@ import { FaWind } from "react-icons/fa";
 import "./WeatherDatas.scss"
 
 const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
-  //  const{icon}=todayData[0].weather[0].icon;
-  //  console.log("icon",icon)
-  // const iconUrl=`https://openweathermap.org/img/wn/${icon}@2x.png`
+//   console.log("todayData",todayData);
+//  const icon=todayData[0].weather[0].icon;
+//  console.log("icon",icon)
+//   //  console.log("icon",icon)
+//   const iconUrl=`https://openweathermap.org/img/wn/${icon}@2x.png`
   return (
     <Container className="mt-5">
       <Card className="pt-4 pb-4 weather-datas-card ">
@@ -21,7 +23,7 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
           className="d-flex justify-content-around align-center"
         >
           <Col className="text-center">
-            {/* {todayData && <img src={`https://openweathermap.org/img/wn/${icon}@2x.png}`}/>} */}
+            {/* {todayData && <img src={iconUrl}/>} */}
             <div className="fs-3">{getHour()}</div>
             <div className="fs-3">{getWeekDay()}</div>
             <div className="display-3">
@@ -57,9 +59,9 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
         </Row>
       </Card>
 
-      <Row>
+      <Row lg={6} md={3} sm={2} >
         {data.map((forecast, index) => (
-          <Col key={index}>
+          <Col key={index} className="mb-3">
             <WeatherData
               key={index}
               forecast={forecast}
@@ -68,7 +70,7 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
           </Col>
         ))}
       </Row>
-      <p className="text-center mt-5 ">Developed By Senay Akagunduz</p>
+      <p className="text-center mt-5">Developed By Senay Akagunduz</p>
     </Container>
   );
 };
