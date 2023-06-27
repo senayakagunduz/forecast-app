@@ -11,6 +11,7 @@ const WeatherApp = () => {
   const [todayData, setTodayData] = useState();
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showWeatherDatas, setShowWeatherDatas]=useState(false)
 
   const moment = require("moment");
   const getHour = () => {
@@ -60,8 +61,8 @@ const WeatherApp = () => {
 
   return (
     <Container className="weather-app-container">
-      <WeatherSearch city={city} setCity={setCity} getData={getData}/>
-      {data && (
+      <WeatherSearch city={city} setCity={setCity} getData={getData} setShowWeatherDatas={setShowWeatherDatas}/>
+      {showWeatherDatas && (
         <WeatherDatas
           data={data}
           setData={setData}

@@ -5,14 +5,13 @@ import { BsArrowDown, BsArrowUp } from "react-icons/bs";
 import { TbTemperaturePlus } from "react-icons/tb";
 import { WiHumidity } from "react-icons/wi";
 import { FaWind } from "react-icons/fa";
-import "./WeatherDatas.scss"
+import "./WeatherDatas.scss";
 
 const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
-//   console.log("todayData",todayData);
-//  const icon=todayData[0].weather[0].icon;
-//  console.log("icon",icon)
-//   //  console.log("icon",icon)
-//   const iconUrl=`https://openweathermap.org/img/wn/${icon}@2x.png`
+  console.log("todayData", todayData);
+  const icon = todayData && todayData[0]?.weather[0]?.icon;
+  //  console.log("icon",icon)
+  const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   return (
     <Container className="mt-5">
       <Card className="pt-4 pb-4 weather-datas-card ">
@@ -23,15 +22,20 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
           className="d-flex justify-content-around align-center"
         >
           <Col className="text-center">
-            {/* {todayData && <img src={iconUrl}/>} */}
             <div className="fs-3">{getHour()}</div>
             <div className="fs-3">{getWeekDay()}</div>
             <div className="display-3">
               {todayData && todayData[0].main.temp}°
             </div>
-            <div className="fs-3">
-              {" "}
-              {todayData && todayData[0].weather[0].description}
+            <div className="fs-3 d-flex">
+              {
+                todayData && (
+                  <>
+                    <img src={iconUrl} />
+                    {todayData[0].weather[0].description}
+                  </>
+                )
+              }
             </div>
           </Col>
 
@@ -59,7 +63,7 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
         </Row>
       </Card>
 
-      <Row lg={6} md={3} sm={2} >
+      <Row lg={6} md={3} sm={2}>
         {data.map((forecast, index) => (
           <Col key={index} className="mb-3">
             <WeatherData
@@ -70,7 +74,7 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
           </Col>
         ))}
       </Row>
-      <p className="text-center mt-5">Developed By Senay Akagunduz</p>
+      <p className="text-center mt-5 text-light fs-4">Developed By Senay Akagunduz</p>
     </Container>
   );
 };

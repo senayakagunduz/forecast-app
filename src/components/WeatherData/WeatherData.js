@@ -8,15 +8,12 @@ const WeatherData = ({forecast, day}) => {
 
     const iconUrl=`https://openweathermap.org/img/wn/${icon}@2x.png`
   return (
-  //  <div className='d-flex align-center justify-content-center g-2 mt-3 h-100 '>
       <Card className='text-center mt-3 pt-4 h-100 w-100 weather-data-card'>
         <h6>{day}</h6>
         <Card.Img variant='top' src={iconUrl}/>
         <Card.Title className='title'>{weather[0].description}</Card.Title>
         <Card.Title className='title'>{main.temp_min}°/{main.temp_max}°</Card.Title> 
     </Card>
-    
-  // </div>
   )
 }
 

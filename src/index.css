@@ -1,8 +1,15 @@
-body{
-    background-image: url("./assets/deniz.JPG");
-    background-repeat: no-repeat;
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    background-repeat: repeat;
     background-size: cover;
-    overflow: hidden;
-    height:100vh;
-    padding:30px;
+    background-position: center;
+    height: 100vh;
+    padding: 40px;
+   
 }

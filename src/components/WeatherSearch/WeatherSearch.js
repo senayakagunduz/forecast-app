@@ -4,13 +4,14 @@ import {BiSearchAlt} from "react-icons/bi"
 import "./WeatherSearch.scss"
 
 
-const WeatherSearch = ({ city, setCity, getData }) => {
+const WeatherSearch = ({ city, setCity, getData, setShowWeatherDatas }) => {
   const handleChange = (e) => {
     setCity(e.target.value);
   };
   const handleSubmit=(e)=>{
     e.preventDefault();
     getData();
+    setShowWeatherDatas(true);
   }
   return (
     <Form onSubmit={handleSubmit} className="parent-form">
