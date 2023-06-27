@@ -1,4 +1,5 @@
-
+# https://649a37c97e9b762493ba4bb6--senayakagunduz-weather-app.netlify.app/
+# ![forecast-screenshot](https://github.com/senayakagunduz/forecast-app/assets/69090467/f8a7f1bd-db27-464c-b357-30c15a69081a)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
