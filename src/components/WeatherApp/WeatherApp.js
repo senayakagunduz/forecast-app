@@ -61,6 +61,7 @@ const WeatherApp = () => {
 
   return (
     <Container className="weather-app-container">
+      
       <WeatherSearch city={city} setCity={setCity} getData={getData} setShowWeatherDatas={setShowWeatherDatas}/>
       {showWeatherDatas && (
         <WeatherDatas

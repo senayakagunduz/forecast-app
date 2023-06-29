@@ -5,15 +5,18 @@ import { BsArrowDown, BsArrowUp } from "react-icons/bs";
 import { TbTemperaturePlus } from "react-icons/tb";
 import { WiHumidity } from "react-icons/wi";
 import { FaWind } from "react-icons/fa";
+
 import "./WeatherDatas.scss";
 
 const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
   console.log("todayData", todayData);
   const icon = todayData && todayData[0]?.weather[0]?.icon;
-  //  console.log("icon",icon)
+
   const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+  
   return (
     <Container className="mt-5">
+      
       <Card className="pt-4 pb-4 weather-datas-card ">
         <Row
           xs={1}
@@ -28,14 +31,12 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
               {todayData && todayData[0].main.temp}°
             </div>
             <div className="fs-3 d-flex">
-              {
-                todayData && (
-                  <>
-                    <img src={iconUrl} />
-                    {todayData[0].weather[0].description}
-                  </>
-                )
-              }
+              {todayData && (
+                <>
+                  <img src={iconUrl} />
+                  {todayData[0].weather[0].description}
+                </>
+              )}
             </div>
           </Col>
 
@@ -74,7 +75,9 @@ const WeatherDatas = ({ weekDays, data, todayData, getHour, getWeekDay }) => {
           </Col>
         ))}
       </Row>
-      <p className="text-center mt-5 text-light fs-4">Developed By Senay Akagunduz</p>
+      <p className="text-center mb-2 mt-2 text-light fs-4 developed-by">
+        Developed By Senay Akagunduz
+      </p>
     </Container>
   );
 };
